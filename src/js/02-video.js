@@ -16,5 +16,7 @@ function updatePosition({ seconds }) {
 
 const videoCurrentTime = localStorage.getItem(storageKey);
 
-player.setCurrentTime(videoCurrentTime);
+if (videoCurrentTime) {
+    player.setCurrentTime(videoCurrentTime);
+};
 
